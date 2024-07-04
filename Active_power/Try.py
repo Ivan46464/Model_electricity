@@ -12,7 +12,7 @@ custom_objects = {
 model = tf.keras.models.load_model('my_model.keras', custom_objects=custom_objects)
 
 
-ct = joblib.load('column_transformer.pkl')
+ct = joblib.load('../column_transformer.pkl')
 
 
 koko = pd.DataFrame([[7.916944, 240.128979]], columns=['Global_intensity', 'Voltage'])

@@ -14,7 +14,7 @@ import joblib
 tf.random.set_seed(35)
 
 
-df = pd.read_csv('household_power_consumption.csv', delimiter=',')
+df = pd.read_csv('../household_power_consumption.csv', delimiter=',')
 
 
 df_clean = df.dropna()
@@ -40,7 +40,7 @@ features_train = ct.fit_transform(features_train)
 features_test = ct.transform(features_test)
 
 
-joblib.dump(ct, 'column_transformer.pkl')
+joblib.dump(ct, '../column_transformer.pkl')
 
 
 model = Sequential(name="my_model")
